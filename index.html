@@ -7,9 +7,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
@@ -21,56 +19,24 @@
       background-color: #f9f9f9;
       color: #333;
     }
-
-    main {
-      flex: 1;
-    }
-
-    /* Navbar & Offcanvas */
-    .navbar, .offcanvas {
-      background-color: #3F51B5 !important;
-    }
-
-    .navbar-brand {
-      font-size: 1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 80%;
-      color: #fff !important;
-    }
-
-    .nav-link {
-      color: #fff !important;
-    }
-
-    .offcanvas-header {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    /* Headings */
-    h1, h2, h5 {
-      color: #009688;
-    }
-
-    /* Cards */
+    main { flex: 1; }
+    .navbar, .offcanvas { background-color: #3F51B5 !important; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    h1, h2, h5 { color: #009688; }
     .card {
       border-radius: 12px;
       border: none;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       background-color: #fff;
     }
-
-    .card-title {
-      color: #3F51B5;
-    }
-
-    /* Footer */
+    .card-title { color: #3F51B5; }
     footer {
       background-color: #2E3A59;
       color: white;
       font-size: 0.9rem;
     }
+    .lang-en { display: block; }
+    .lang-te { display: none; }
   </style>
 </head>
 <body>
@@ -80,22 +46,25 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <a class="navbar-brand">Sapthagiri Colony Welfare Society</a>
 
-      <!-- Offcanvas Toggle Button -->
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Desktop Navbar Links -->
       <div class="d-none d-lg-flex">
-        <ul class="navbar-nav flex-row gap-3">
+        <ul class="navbar-nav flex-row gap-3 align-items-center mb-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
           <li class="nav-item"><a class="nav-link" href="residents.html">Residents</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-sm btn-light me-1" onclick="setLanguage('en')">English</button>
+            <button class="btn btn-sm btn-warning" onclick="setLanguage('te')">తెలుగు</button>
+          </li>
         </ul>
       </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
 
@@ -114,49 +83,76 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
+      <hr>
+      <div>
+        <button class="btn btn-sm btn-light w-100 mb-2" onclick="setLanguage('en')">English</button>
+        <button class="btn btn-sm btn-warning w-100" onclick="setLanguage('te')">తెలుగు</button>
+      </div>
     </div>
   </div>
 
   <!-- Main Content -->
   <main>
-    <!-- Hero Section -->
     <section class="text-center py-5 bg-light">
       <div class="container">
-        <h1 class="display-5 fw-bold">Welcome to Sapthagiri Colony Welfare Society</h1>
-        <p class="lead">A peaceful and vibrant community in the heart of our city</p>
+        <div class="lang-en">
+          <h1 class="display-5 fw-bold">Welcome to Sapthagiri Colony Welfare Society</h1>
+          <p class="lead">A peaceful and vibrant community in the heart of our city</p>
+        </div>
+        <div class="lang-te">
+          <h1 class="display-5 fw-bold">సప్తగిరి కాలనీ సంక్షేమ సంఘానికి స్వాగతం</h1>
+          <p class="lead">మా పట్టణ హృదయంలో శాంతియుతమైన మరియు ఉల్లాసమైన వసతి సముదాయం</p>
+        </div>
       </div>
     </section>
 
-    <!-- Notices Section -->
     <section class="container my-5">
-  <h2 class="text-center mb-4">Latest Notices</h2>
-  <div class="row g-4">
-
-    <div class="col-md-12">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">UGD and CC Road Development</h5>
-          <p class="card-text">
-            Sub: Request for Sanction of UGD and CC Road Development Works.
-          </p>
-          <a href="assets/notices/notice1.pdf" target="_blank" class="btn btn-sm btn-primary">
-            View Full Notice (PDF)
-          </a>
-          <small class="text-muted d-block mt-2">Posted on: 28th June 2025</small>
+      <h2 class="text-center mb-4">
+        <span class="lang-en">Latest Notices</span>
+        <span class="lang-te">తాజా ప్రకటనలు</span>
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                <span class="lang-en">UGD and CC Road Development</span>
+                <span class="lang-te">UGD మరియు CC రోడ్ అభివృద్ధి</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-en">Sub: Request for Sanction of UGD and CC Road Development Works.</span>
+                <span class="lang-te">ఉగ్‌డీ మరియు సిమెంట్ కాంక్రీట్ రోడ్ల అభివృద్ధి పనులకు మంజూరు చేయమని అభ్యర్థన.</span>
+              </p>
+              <a href="assets/notices/notice1.pdf" target="_blank" class="btn btn-sm btn-primary">
+                <span class="lang-en">View Full Notice (PDF)</span>
+                <span class="lang-te">పూర్తి నోటీస్ చూడండి (PDF)</span>
+              </a>
+              <small class="text-muted d-block mt-2">
+                <span class="lang-en">Posted on: 28th June 2025</span>
+                <span class="lang-te">తేదీ: 28 జూన్ 2025</span>
+              </small>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-  </div>
-</section>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="text-center py-3">
-    <p class="mb-0">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</p>
+    <p class="mb-0">
+      <span class="lang-en">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</span>
+      <span class="lang-te">&copy; 2025 సప్తగిరి కాలనీ సంక్షేమ సంఘం. అన్ని హక్కులు రిజర్వు.</span>
+    </p>
   </footer>
 
-  <!-- Bootstrap JS Bundle -->
+  <!-- Bootstrap JS + Language Switcher -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
+      document.querySelectorAll('.lang-te').forEach(el => el.style.display = (lang === 'te') ? 'block' : 'none');
+    }
+  </script>
 </body>
 </html>

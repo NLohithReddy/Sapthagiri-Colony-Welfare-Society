@@ -7,9 +7,7 @@
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
@@ -20,46 +18,15 @@
       min-height: 100vh;
       background-color: #f9f9f9;
     }
-
-    main {
-      flex: 1;
-    }
-
-    .navbar, .offcanvas {
-      background-color: #3F51B5 !important;
-    }
-
-    .navbar-brand {
-      font-size: 1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 80%;
-      color: #fff !important;
-    }
-
-    .nav-link {
-      color: #fff !important;
-    }
-
-    h2, h5 {
-      color: #009688;
-    }
-
-    .card, .bg-light {
-      border-radius: 12px;
-      background-color: #ffffff;
-    }
-
-    .offcanvas-header {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    footer {
-      background-color: #2E3A59;
-      color: white;
-      font-size: 0.9rem;
-    }
+    main { flex: 1; }
+    .navbar, .offcanvas { background-color: #3F51B5 !important; }
+    .navbar-brand, .nav-link { color: #fff !important; }
+    h2, h5 { color: #009688; }
+    .card, .bg-light { border-radius: 12px; background-color: #ffffff; }
+    .offcanvas-header { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    footer { background-color: #2E3A59; color: white; font-size: 0.9rem; }
+    .lang-en { display: block; }
+    .lang-te { display: none; }
   </style>
 </head>
 <body>
@@ -69,20 +36,24 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <a class="navbar-brand">Sapthagiri Colony Welfare Society</a>
 
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <div class="d-none d-lg-flex">
-        <ul class="navbar-nav flex-row gap-3">
+        <ul class="navbar-nav flex-row gap-3 align-items-center mb-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
           <li class="nav-item"><a class="nav-link" href="residents.html">Residents</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-sm btn-light me-1" onclick="setLanguage('en')">English</button>
+            <button class="btn btn-sm btn-warning" onclick="setLanguage('te')">తెలుగు</button>
+          </li>
         </ul>
       </div>
+
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
 
@@ -101,46 +72,70 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
+      <hr>
+      <div>
+        <button class="btn btn-sm btn-light w-100 mb-2" onclick="setLanguage('en')">English</button>
+        <button class="btn btn-sm btn-warning w-100" onclick="setLanguage('te')">తెలుగు</button>
+      </div>
     </div>
   </div>
 
   <!-- Main Content -->
   <main>
     <section class="container my-5">
-      <h2 class="text-center mb-4">About Our Society</h2>
+      <h2 class="text-center mb-4">
+        <span class="lang-en">About Our Society</span>
+        <span class="lang-te">మన సంఘం గురించి</span>
+      </h2>
       <div class="row">
         <div class="col-md-6">
-          <p>
-            <strong>Sapthagiri Colony Welfare Society</strong> is a vibrant and well-organized residential community, committed to providing a safe, clean, and friendly environment for all its residents. Established with the aim of fostering unity and development, our society is a reflection of strong community values and active participation.
-          </p>
-          <p>
-            Located in a peaceful neighborhood, our colony is home to families from diverse backgrounds living in harmony. We host regular society meetings to ensure active engagement and inclusivity.
-          </p>
+          <div class="lang-en">
+            <p>
+              <strong>Sapthagiri Colony Welfare Society</strong> is a vibrant and well-organized residential community, committed to providing a safe, clean, and friendly environment for all its residents. Established with the aim of fostering unity and development, our society is a reflection of strong community values and active participation.
+            </p>
+            <p>
+              Located in a peaceful neighborhood, our colony is home to families from diverse backgrounds living in harmony. We host regular society meetings to ensure active engagement and inclusivity.
+            </p>
+          </div>
+          <div class="lang-te">
+            <p>
+              <strong>సప్తగిరి కాలనీ వెల్ఫేర్ సొసైటీ</strong> శాంతియుతమైన, శుభ్రమైన మరియు స్నేహపూర్వక వాతావరణాన్ని అందించడానికి కట్టుబడి ఉన్న ఉత్సాహభరితమైన మరియు బాగా నిర్వహించబడిన నివాస సముదాయం. ఐక్యత మరియు అభివృద్ధిని ప్రోత్సహించడానికి స్థాపించబడిన ఈ సంఘం బలమైన కమ్యూనిటీ విలువలు మరియు సక్రియ పాల్గొనటానికి నిదర్శనం.
+            </p>
+            <p>
+              శాంతియుత పరిసరాల్లో ఉన్న మా కాలనీ భిన్నమైన నేపథ్యాల నుండి వచ్చిన కుటుంబాలకు నివాసం. మేము రెగ్యులర్ సొసైటీ సమావేశాలను నిర్వహిస్తూ నివాసితుల మధ్య చురుకైన భాగస్వామ్యాన్ని మరియు సమగ్రతను ప్రోత్సహిస్తున్నాము.
+            </p>
+          </div>
         </div>
         <div class="col-md-6">
           <div class="bg-light border rounded p-4 shadow-sm">
-  <h5 class="text-primary mb-3">Committee Members (2025)</h5>
-  <ul class="list-unstyled">
-    <li><strong>President:</strong> Sri. G. Santosh Kumar</li>
-    <li><strong>Vice President:</strong> Sri. D. Venkat</li>
-    <li><strong>General Secretary:</strong> Sri. K. Venu Gopal</li>
-    <li><strong>Joint Secretary:</strong> Sri. M. Ravishankar</li>
-    <li><strong>Treasurer:</strong> Sri. Vittal</li>
-    <li><strong>Adviser:</strong> Sri. Putti Narsimha</li>
-    <li><strong>Organizing Secretary:</strong> Sri. R. Arjun Rao</li>
-    <li><strong>Organizing Secretary:</strong> Sri. E. Yashwanth</li>
-    <li><strong>Organizing Secretary:</strong> Sri. O. Mastan Naidu</li>
-    <li><strong>Organizing Secretary:</strong> Sri. K. Sridhar</li>
-    <li><strong>Organizing Secretary:</strong> Sri. D. Govind</li>
-  </ul>
-</div>
+            <h5 class="text-primary mb-3">
+              <span class="lang-en">Committee Members (2025)</span>
+              <span class="lang-te">కమిటీ సభ్యులు (2025)</span>
+            </h5>
+            <ul class="list-unstyled">
+              <li><strong>President:</strong> Sri. G. Santosh Kumar</li>
+              <li><strong>Vice President:</strong> Sri. D. Venkat</li>
+              <li><strong>General Secretary:</strong> Sri. K. Venu Gopal</li>
+              <li><strong>Joint Secretary:</strong> Sri. M. Ravishankar</li>
+              <li><strong>Treasurer:</strong> Sri. Vittal</li>
+              <li><strong>Adviser:</strong> Sri. Putti Narsimha</li>
+              <li><strong>Organizing Secretary:</strong> Sri. R. Arjun Rao</li>
+              <li><strong>Organizing Secretary:</strong> Sri. E. Yashwanth</li>
+              <li><strong>Organizing Secretary:</strong> Sri. O. Mastan Naidu</li>
+              <li><strong>Organizing Secretary:</strong> Sri. K. Sridhar</li>
+              <li><strong>Organizing Secretary:</strong> Sri. D. Govind</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Our Location Title -->
     <section class="text-center py-4 bg-light">
-      <h5 class="text-primary">Our Location</h5>
+      <h5 class="text-primary">
+        <span class="lang-en">Our Location</span>
+        <span class="lang-te">మా వేదిక</span>
+      </h5>
     </section>
 
     <!-- Google Map -->
@@ -158,10 +153,19 @@
 
   <!-- Footer -->
   <footer class="text-center py-3">
-    <p class="mb-0">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</p>
+    <p class="mb-0">
+      <span class="lang-en">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</span>
+      <span class="lang-te">&copy; 2025 సప్తగిరి కాలనీ సంక్షేమ సంఘం. అన్ని హక్కులు రిజర్వు.</span>
+    </p>
   </footer>
 
-  <!-- Bootstrap JS -->
+  <!-- Bootstrap JS + Language Switcher -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
+      document.querySelectorAll('.lang-te').forEach(el => el.style.display = (lang === 'te') ? 'block' : 'none');
+    }
+  </script>
 </body>
 </html>

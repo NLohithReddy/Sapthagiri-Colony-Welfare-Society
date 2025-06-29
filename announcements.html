@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Announcements - Sapthagiri Colony Welfare Society</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
@@ -20,41 +17,16 @@
       min-height: 100vh;
       background-color: #f8f9fa;
     }
-
-    main {
-      flex: 1;
-    }
-
-    .navbar, .offcanvas {
-      background-color: #3F51B5;
-    }
-
-    .navbar-brand, .nav-link {
-      color: white !important;
-    }
-
-    h2 {
-      color: #009688;
-    }
-
-    .form-select {
-      background-color: #ffffff;
-      border-color: #ccc;
-    }
-
-    footer {
-      background-color: #2E3A59;
-      color: white;
-      font-size: 0.9rem;
-    }
-
-    .accordion-button {
-      font-weight: 600;
-    }
-
-    .offcanvas-header {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
+    main { flex: 1; }
+    .navbar, .offcanvas { background-color: #3F51B5; }
+    .navbar-brand, .nav-link { color: white !important; }
+    h2 { color: #009688; }
+    .form-select { background-color: #ffffff; border-color: #ccc; }
+    footer { background-color: #2E3A59; color: white; font-size: 0.9rem; }
+    .accordion-button { font-weight: 600; }
+    .offcanvas-header { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+    .lang-en { display: block; }
+    .lang-te { display: none; }
   </style>
 </head>
 <body>
@@ -64,20 +36,24 @@
     <div class="container-fluid d-flex justify-content-between align-items-center">
       <a class="navbar-brand">Sapthagiri Colony Welfare Society</a>
 
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
       <div class="d-none d-lg-flex">
-        <ul class="navbar-nav flex-row gap-3">
+        <ul class="navbar-nav flex-row gap-3 align-items-center mb-0">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link active" href="announcements.html">Announcements</a></li>
           <li class="nav-item"><a class="nav-link" href="residents.html">Residents</a></li>
           <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item">
+            <button class="btn btn-sm btn-light me-1" onclick="setLanguage('en')">English</button>
+            <button class="btn btn-sm btn-warning" onclick="setLanguage('te')">తెలుగు</button>
+          </li>
         </ul>
       </div>
+
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
   </nav>
 
@@ -96,13 +72,21 @@
         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
+      <hr>
+      <div>
+        <button class="btn btn-sm btn-light w-100 mb-2" onclick="setLanguage('en')">English</button>
+        <button class="btn btn-sm btn-warning w-100" onclick="setLanguage('te')">తెలుగు</button>
+      </div>
     </div>
   </div>
 
   <!-- Main Content -->
   <main>
     <section class="container my-5">
-      <h2 class="text-center mb-4">Latest Announcements</h2>
+      <h2 class="text-center mb-4">
+        <span class="lang-en">Latest Announcements</span>
+        <span class="lang-te">తాజా ప్రకటనలు</span>
+      </h2>
 
       <!-- Filter Dropdown -->
       <div class="row mb-4">
@@ -124,17 +108,27 @@
         <div class="accordion-item" data-date="2025-06-26">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              UGD Work Initiation in Road No. 4 - Thanks to Sri Karkam Srisailam Yadav Garu
+              <span class="lang-en">UGD Work Initiation in Road No. 4 - Thanks to Sri Karkam Srisailam Yadav Garu</span>
+              <span class="lang-te">రోడ్ నెం 4 లో UGD పనుల ప్రారంభం - శ్రీ కార్కం శ్రీసైలం యాదవ్ గారికి కృతజ్ఞతలు</span>
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#announcementAccordion">
             <div class="accordion-body">
               <small class="text-muted">Posted on: 26th June 2025</small>
-              <p>On 24th June 2025, members of the Sapthagiri Colony Welfare Society met Sri Karkam Srisailam Yadav Garu, a resident of Gollagudem.</p>
-              <p>We requested his support for our colony development works, and he responded immediately by promising the complete construction of the Underground Drainage (UGD) system in Road No. 4.</p>
-              <p>As per his commitment, materials for the UGD work have been arranged and all preparations to start the work are completed.</p>
-              <p>We are happy to share this update with all residents.</p>
-              <p>On behalf of all Sapthagiri Colony Welfare Society members and the residents, we extend our heartfelt thanks to Sri Karkam Srisailam Garu.</p>
+              <div class="lang-en">
+                <p>On 24th June 2025, members of the Sapthagiri Colony Welfare Society met Sri Karkam Srisailam Yadav Garu, a resident of Gollagudem.</p>
+                <p>We requested his support for our colony development works, and he responded immediately by promising the complete construction of the Underground Drainage (UGD) system in Road No. 4.</p>
+                <p>As per his commitment, materials for the UGD work have been arranged and all preparations to start the work are completed.</p>
+                <p>We are happy to share this update with all residents.</p>
+                <p>On behalf of all Sapthagiri Colony Welfare Society members and the residents, we extend our heartfelt thanks to Sri Karkam Srisailam Garu.</p>
+              </div>
+              <div class="lang-te">
+                <p>2025 జూన్ 24న, సప్తగిరి కాలనీ వెల్ఫేర్ సొసైటీ సభ్యులు గోల్లగూడెం నివాసి శ్రీ కార్కం శ్రీసైలం యాదవ్ గారిని కలిశారు.</p>
+                <p>మా కాలనీ అభివృద్ధి పనుల కోసం ఆయన సహాయాన్ని కోరిన వెంటనే, ఆయన రోడ్ నెం.4లో పూర్తి UGD నిర్మాణానికి వాగ్దానం చేశారు.</p>
+                <p>ఆయన వాగ్దాన ప్రకారం, UGD పనుల కోసం అవసరమైన సామాగ్రి సిద్ధం చేయబడింది మరియు పనులు ప్రారంభించడానికి అన్ని ఏర్పాట్లు పూర్తయ్యాయి.</p>
+                <p>ఈ సమాచారం మేము కాలనీ నివాసితులందరితో పంచుకుంటున్నాము.</p>
+                <p>సప్తగిరి కాలనీ వెల్ఫేర్ సొసైటీ మరియు నివాసితుల తరఫున శ్రీ కార్కం శ్రీసైలం గారికి మనఃపూర్వక కృతజ్ఞతలు.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -143,23 +137,39 @@
         <div class="accordion-item" data-date="2025-06-28">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-              Colony Development Program - Thank You Note
+              <span class="lang-en">Colony Development Program - Thank You Note</span>
+              <span class="lang-te">కాలనీ అభివృద్ధి కార్యక్రమం - కృతజ్ఞతా సందేశం</span>
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#announcementAccordion">
             <div class="accordion-body">
               <small class="text-muted">Posted on: 28th June 2025</small>
-              <p>Today, in the program conducted in our colony, we were honored by the gracious presence of:</p>
-              <ul>
-                <li>Smt. Turpu Nirmala Jaggareddy Garu, Chairperson, Telangana Industrial Infrastructure Corporation Limited</li>
-                <li>Sri Ramchander Garu, Market Committee Chairman</li>
-                <li>Sri Thopaji Anantha Kishan Garu</li>
-                <li>Sri Kun Santosh Garu</li>
-                <li>Sri Srisailam Garu</li>
-              </ul>
-              <p>They assured us that Underground Drainage (UGD) and Cement Concrete (CC) Roads will be constructed on all roads within our colony.</p>
-              <p>On behalf of all Sapthagiri Colony Welfare Society members and the residents, we sincerely thank them for their support and commitment.</p>
-              <p>We also extend heartfelt thanks to all our colony residents for attending the event in large numbers and making it a grand success.</p>
+              <div class="lang-en">
+                <p>Today, in the program conducted in our colony, we were honored by the gracious presence of:</p>
+                <ul>
+                  <li>Smt. Turpu Nirmala Jaggareddy Garu, Chairperson, Telangana Industrial Infrastructure Corporation Limited</li>
+                  <li>Sri Ramchander Garu, Market Committee Chairman</li>
+                  <li>Sri Thopaji Anantha Kishan Garu</li>
+                  <li>Sri Kun Santosh Garu</li>
+                  <li>Sri Srisailam Garu</li>
+                </ul>
+                <p>They assured us that Underground Drainage (UGD) and Cement Concrete (CC) Roads will be constructed on all roads within our colony.</p>
+                <p>On behalf of all Sapthagiri Colony Welfare Society members and the residents, we sincerely thank them for their support and commitment.</p>
+                <p>We also extend heartfelt thanks to all our colony residents for attending the event in large numbers and making it a grand success.</p>
+              </div>
+              <div class="lang-te">
+                <p>ఈ రోజు మా కాలనీలో నిర్వహించిన కార్యక్రమంలో ఈ క్రింది ప్రముఖులు పాల్గొన్నారు:</p>
+                <ul>
+                  <li>శ్రీమతి తూర్పు నిర్మల జగ్గారెడ్డి గారు, చైర్‌పర్సన్, తెలంగాణ ఇండస్ట్రియల్ ఇన్‌ఫ్రాస్ట్రక్చర్ కార్పొరేషన్ లిమిటెడ్</li>
+                  <li>శ్రీ రాంచందర్ గారు, మార్కెట్ కమిటీ చైర్మన్</li>
+                  <li>శ్రీ తోపాజీ అనంత కిషన్ గారు</li>
+                  <li>శ్రీ కున్ సంతోష్ గారు</li>
+                  <li>శ్రీ శ్రీసైలం గారు</li>
+                </ul>
+                <p>వారు మా కాలనీలో అన్ని రోడ్లలో UGD మరియు CC రోడ్లు నిర్మాణం జరగనున్నట్లు హామీ ఇచ్చారు.</p>
+                <p>వారి సహకారం మరియు కట్టుబాటుకు సప్తగిరి కాలనీ వెల్ఫేర్ సొసైటీ మరియు నివాసితుల తరఫున మనఃపూర్వక ధన్యవాదాలు తెలియజేస్తున్నాము.</p>
+                <p>ఈ కార్యక్రమాన్ని విజయవంతం చేసిన మా కాలనీ నివాసితులందరికీ హృదయపూర్వక కృతజ్ఞతలు.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -170,11 +180,20 @@
 
   <!-- Footer -->
   <footer class="text-center py-3">
-    <p class="mb-0">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</p>
+    <p class="mb-0">
+      <span class="lang-en">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</span>
+      <span class="lang-te">&copy; 2025 సప్తగిరి కాలనీ సంక్షేమ సంఘం. అన్ని హక్కులు రిజర్వు.</span>
+    </p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
+      document.querySelectorAll('.lang-te').forEach(el => el.style.display = (lang === 'te') ? 'block' : 'none');
+    }
+  </script>
 
   <!-- Date Filter Script -->
   <script>
@@ -182,13 +201,11 @@
       const days = this.value;
       const today = new Date();
       const announcements = document.querySelectorAll(".accordion-item");
-
       announcements.forEach(item => {
         const postDateStr = item.getAttribute("data-date");
         const postDate = new Date(postDateStr);
         const diffTime = today - postDate;
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
         if (days === "all" || diffDays <= parseInt(days)) {
           item.style.display = "block";
         } else {
