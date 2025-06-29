@@ -48,8 +48,8 @@
       font-size: 0.9rem;
     }
 
-    .card {
-      border-radius: 12px;
+    .accordion-button {
+      font-weight: 600;
     }
 
     .offcanvas-header {
@@ -117,35 +117,49 @@
         </div>
       </div>
 
-      <!-- Announcement Cards -->
-      <div class="row g-4" id="announcementList">
+      <!-- Accordion Announcements -->
+      <div class="accordion" id="announcementAccordion">
 
-        <div class="col-md-6" data-date="2025-06-23">
-          <div class="card border-info shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Electricity Maintenance</h5>
-              <p class="card-text">Power will be shut down on 25th June from 9 AM to 12 PM for line maintenance. Please plan accordingly.</p>
-              <small class="text-muted">Posted on: 23rd June 2025</small>
+        <!-- Announcement 1 -->
+        <div class="accordion-item" data-date="2025-06-26">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              UGD Work Initiation in Road No. 4 - Thanks to Sri Karkam Srisailam Yadav Garu
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#announcementAccordion">
+            <div class="accordion-body">
+              <small class="text-muted">Posted on: 26th June 2025</small>
+              <p>On 24th June 2025, members of the Sapthagiri Colony Welfare Society met Sri Karkam Srisailam Yadav Garu, a resident of Gollagudem.</p>
+              <p>We requested his support for our colony development works, and he responded immediately by promising the complete construction of the Underground Drainage (UGD) system in Road No. 4.</p>
+              <p>As per his commitment, materials for the UGD work have been arranged and all preparations to start the work are completed.</p>
+              <p>We are happy to share this update with all residents.</p>
+              <p>On behalf of all Sapthagiri Colony Welfare Society members and the residents, we extend our heartfelt thanks to Sri Karkam Srisailam Garu.</p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6" data-date="2025-06-21">
-          <div class="card border-warning shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Community Meeting</h5>
-              <p class="card-text">A general body meeting will be held on 28th June at 6 PM in the clubhouse. All residents are requested to attend.</p>
-              <small class="text-muted">Posted on: 21st June 2025</small>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" data-date="2025-06-20">
-          <div class="card border-success shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">Rainwater Harvesting Drive</h5>
-              <p class="card-text">Join the awareness drive on 30th June, 8 AM. Let's make Sapthagiri Colony more water-secure.</p>
-              <small class="text-muted">Posted on: 20th June 2025</small>
+        <!-- Announcement 2 -->
+        <div class="accordion-item" data-date="2025-06-28">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Colony Development Program - Thank You Note
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#announcementAccordion">
+            <div class="accordion-body">
+              <small class="text-muted">Posted on: 28th June 2025</small>
+              <p>Today, in the program conducted in our colony, we were honored by the gracious presence of:</p>
+              <ul>
+                <li>Smt. Turpu Nirmala Jaggareddy Garu, Chairperson, Telangana Industrial Infrastructure Corporation Limited</li>
+                <li>Sri Ramchander Garu, Market Committee Chairman</li>
+                <li>Sri Thopaji Anantha Kishan Garu</li>
+                <li>Sri Kun Santosh Garu</li>
+                <li>Sri Srisailam Garu</li>
+              </ul>
+              <p>They assured us that Underground Drainage (UGD) and Cement Concrete (CC) Roads will be constructed on all roads within our colony.</p>
+              <p>On behalf of all Sapthagiri Colony Welfare Society members and the residents, we sincerely thank them for their support and commitment.</p>
+              <p>We also extend heartfelt thanks to all our colony residents for attending the event in large numbers and making it a grand success.</p>
             </div>
           </div>
         </div>
@@ -166,18 +180,19 @@
   <script>
     document.getElementById("dateFilter").addEventListener("change", function () {
       const days = this.value;
-      const cards = document.querySelectorAll("#announcementList .col-md-6");
       const today = new Date();
+      const announcements = document.querySelectorAll(".accordion-item");
 
-      cards.forEach(card => {
-        const postDate = new Date(card.getAttribute("data-date"));
+      announcements.forEach(item => {
+        const postDateStr = item.getAttribute("data-date");
+        const postDate = new Date(postDateStr);
         const diffTime = today - postDate;
         const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
         if (days === "all" || diffDays <= parseInt(days)) {
-          card.style.display = "block";
+          item.style.display = "block";
         } else {
-          card.style.display = "none";
+          item.style.display = "none";
         }
       });
     });

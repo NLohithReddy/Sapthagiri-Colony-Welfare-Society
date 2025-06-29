@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Residents - Sapthagiri Colony Welfare Society</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
@@ -20,35 +17,27 @@
       min-height: 100vh;
       background-color: #f8f9fa;
     }
-
     main {
       flex: 1;
     }
-
     .navbar, .offcanvas {
       background-color: #3F51B5;
     }
-
     .navbar-brand, .nav-link {
       color: white !important;
     }
-
     h2 {
       color: #009688;
     }
-
     #searchInput {
       max-width: 350px;
     }
-
     table th, table td {
       vertical-align: middle;
     }
-
     .offcanvas-header {
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-
     footer {
       background-color: #2E3A59;
       color: white;
@@ -101,56 +90,216 @@
   <!-- Main Content -->
   <main>
     <section class="container my-5">
-      <h2 class="text-center mb-4">Residents List</h2>
+  <h2 class="text-center mb-4">Residents List</h2>
+  <div class="mb-4 text-center">
+  <input type="text" id="searchInput" class="form-control d-inline-block" style="max-width: 300px;" placeholder="Search by Name or Phone...">
+  </div>
 
-      <!-- Search -->
-      <div class="d-flex justify-content-center">
-        <input type="text" id="searchInput" class="form-control text-center" placeholder="Search by Name or House No">
-      </div>
+  <!-- Road 1 Residents -->
+  <h4 class="mt-4">Road No: 1</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="table-primary text-center">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr><td>1</td><td>Aziz</td><td>9848895188</td></tr>
+        <tr><td>2</td><td>B.Abhilash</td><td>9491684115</td></tr>
+        <tr><td>3</td><td>B.Vivek</td><td>7382829620</td></tr>
+        <tr><td>4</td><td>Ch.Govindu</td><td></td></tr>
+        <tr><td>5</td><td>D.Ramesh</td><td>9494908750</td></tr>
+        <tr><td>6</td><td>Dr.Vittobha</td><td>9440603509</td></tr>
+        <tr><td>7</td><td>Jamla Nayak</td><td>9949445490</td></tr>
+        <tr><td>8</td><td>K.Nagesh</td><td></td></tr>
+        <tr><td>9</td><td>K.Satish</td><td>9505351238</td></tr>
+        <tr><td>10</td><td>M.Ramulu</td><td>9490791060</td></tr>
+        <tr><td>11</td><td>P.Prabhu</td><td>9959565383</td></tr>
+        <tr><td>12</td><td>Pandari Naik</td><td>9440881746</td></tr>
+        <tr><td>13</td><td>Raghunath</td><td>9866967277</td></tr>
+        <tr><td>14</td><td>Ramchender</td><td>9676169519</td></tr>
+        <tr><td>15</td><td>Ramchender Naik</td><td>9492559881</td></tr>
+        <tr><td>16</td><td>V.Eshwar</td><td>9492303733</td></tr>
+        <tr><td>17</td><td>V.Padma</td><td>7416697609</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-      <!-- Table -->
-      <div class="table-responsive mt-4">
-        <table class="table table-bordered table-hover shadow-sm" id="residentsTable">
-          <thead class="table-primary text-center">
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th>House No</th>
-              <th>Role</th>
-              <th>Phone</th>
-              <th>Email</th>
-            </tr>
-          </thead>
-          <tbody class="text-center">
-            <tr>
-              <td>1</td>
-              <td>Mr. Ravi Kumar</td>
-              <td>A-101</td>
-              <td>President</td>
-              <td>9876543210</td>
-              <td>ravi.kumar@example.com</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Mrs. Anjali Sharma</td>
-              <td>A-102</td>
-              <td>Secretary</td>
-              <td>9876543211</td>
-              <td>anjali.sharma@example.com</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Mr. Naresh Reddy</td>
-              <td>A-103</td>
-              <td>Treasurer</td>
-              <td>9876543212</td>
-              <td>naresh.reddy@example.com</td>
-            </tr>
-            <!-- Add more rows if needed -->
-          </tbody>
-        </table>
-      </div>
-    </section>
+  <!-- Road 2 Residents -->
+  <h4 class="mt-5">Road No: 2</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="table-success text-center">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr><td>1</td><td>A.Kalyan Kumar</td><td></td></tr>
+        <tr><td>2</td><td>A.Prasanth Kumar</td><td></td></tr>
+        <tr><td>3</td><td>Amose</td><td>9492004652</td></tr>
+        <tr><td>4</td><td>Ankama Rao</td><td>9949633272</td></tr>
+        <tr><td>5</td><td>B.Shankarappa / Srinivas</td><td>9313196833</td></tr>
+        <tr><td>6</td><td>C.Shasthry</td><td>9963128002</td></tr>
+        <tr><td>7</td><td>C.Vijay Kumar</td><td>6305476464</td></tr>
+        <tr><td>8</td><td>D.Srinivas Pantulu</td><td>9959368977</td></tr>
+        <tr><td>9</td><td>Dhakshina Murthy</td><td></td></tr>
+        <tr><td>10</td><td>Durgaiah</td><td></td></tr>
+        <tr><td>11</td><td>G.Rajalingam</td><td>9440167326</td></tr>
+        <tr><td>12</td><td>G.Venkatesham</td><td></td></tr>
+        <tr><td>13</td><td>Ganesh Rao</td><td>9550924820</td></tr>
+        <tr><td>14</td><td>I.Madhu</td><td>9440389327</td></tr>
+        <tr><td>15</td><td>J.Surender</td><td></td></tr>
+        <tr><td>16</td><td>KBVN Phanindar</td><td>9849501338</td></tr>
+        <tr><td>17</td><td>KR.Srinivas Goud</td><td>9492914044</td></tr>
+        <tr><td>18</td><td>K.Ramesh</td><td>9441851687</td></tr>
+        <tr><td>19</td><td>K.Venu Gopal</td><td>9949706210</td></tr>
+        <tr><td>20</td><td>M.Anil Kumar</td><td>8688616176</td></tr>
+        <tr><td>21</td><td>M.Ravi Shankar</td><td>9052972005</td></tr>
+        <tr><td>22</td><td>M.Suresh</td><td>9000410126</td></tr>
+        <tr><td>23</td><td>Mallesham</td><td>9866834089</td></tr>
+        <tr><td>24</td><td>Manisha</td><td>8121182268</td></tr>
+        <tr><td>25</td><td>N.Santosh Kumar</td><td></td></tr>
+        <tr><td>26</td><td>P.Narendra ( Rani )</td><td>9705379207</td></tr>
+        <tr><td>27</td><td>Prakash Rao</td><td>9866256826</td></tr>
+        <tr><td>28</td><td>R.Arjun Rao</td><td>9440742721</td></tr>
+        <tr><td>29</td><td>R.Hari Singh</td><td>9441284201</td></tr>
+        <tr><td>30</td><td>Rasool Naidu</td><td>9440736073</td></tr>
+        <tr><td>31</td><td>S.Vinay Kumar S/o Giri</td><td>7386478048</td></tr>
+        <tr><td>32</td><td>T.Vittal Rao</td><td>9490621622</td></tr>
+        <tr><td>33</td><td>V.Gopal</td><td>9866860183</td></tr>
+        <tr><td>34</td><td>V.Ravinder</td><td></td></tr>
+        <tr><td>35</td><td>V.Sudhakar</td><td>9490448923</td></tr>
+        <tr><td>36</td><td>Valu Naik</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Road 3 Residents -->
+  <h4 class="mt-5">Road No: 3</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="table-warning text-center">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr><td>1</td><td>Avinash</td><td>8639905005</td></tr>
+        <tr><td>2</td><td>B.Laxminarayana</td><td>9440211479</td></tr>
+        <tr><td>3</td><td>Banda Srinivas</td><td></td></tr>
+        <tr><td>4</td><td>Ch.Mariyadasu</td><td>8790413811</td></tr>
+        <tr><td>5</td><td>D.Ramchender</td><td>9440380468</td></tr>
+        <tr><td>6</td><td>D.Yadagiri</td><td>9866860595</td></tr>
+        <tr><td>7</td><td>G.Chandraiah</td><td>9866860341</td></tr>
+        <tr><td>8</td><td>G.Chendra Shekar</td><td></td></tr>
+        <tr><td>9</td><td>G.Kondal Rao</td><td>9491679139</td></tr>
+        <tr><td>10</td><td>G.Santosh Kumar</td><td>9441179203</td></tr>
+        <tr><td>11</td><td>G.Venkatesham</td><td></td></tr>
+        <tr><td>12</td><td>J.Maruthi</td><td>9440603700</td></tr>
+        <tr><td>13</td><td>K.Dhannu</td><td>9963500594</td></tr>
+        <tr><td>14</td><td>K.Sudhakar</td><td>9440003626</td></tr>
+        <tr><td>15</td><td>Kondal Rao</td><td></td></tr>
+        <tr><td>16</td><td>M.Bala Swamy</td><td></td></tr>
+        <tr><td>17</td><td>M.Laxminarayana</td><td>9440448871</td></tr>
+        <tr><td>18</td><td>M.Ravindar</td><td>9908345099</td></tr>
+        <tr><td>19</td><td>N.Sreenivasula Reddy</td><td>7842475010</td></tr>
+        <tr><td>20</td><td>Narsimha Reddy</td><td>9441721531</td></tr>
+        <tr><td>21</td><td>Nayab Rasool</td><td>7989407004</td></tr>
+        <tr><td>22</td><td>P.Kumar / Pentaiah</td><td>8367398442</td></tr>
+        <tr><td>23</td><td>Pandarinath</td><td>9441498730</td></tr>
+        <tr><td>24</td><td>Phani</td><td>9618707097</td></tr>
+        <tr><td>25</td><td>Ravinder</td><td>9949271969</td></tr>
+        <tr><td>26</td><td>S.Veerkumar</td><td>9666560007</td></tr>
+        <tr><td>27</td><td>S.Vijay Kumar</td><td></td></tr>
+        <tr><td>28</td><td>Shashidhar Reddy</td><td></td></tr>
+        <tr><td>29</td><td>V.Raghupathi</td><td>9493013559</td></tr>
+        <tr><td>30</td><td>V.Sanjeev</td><td>9491682984</td></tr>
+        <tr><td>31</td><td>Yeshwanth</td><td>9490059679</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Road 4 Residents -->
+  <h4 class="mt-5">Road No: 4</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="table-info text-center">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr><td>1</td><td>B.Jagadeesh</td><td>9963117756</td></tr>
+        <tr><td>2</td><td>B.Srinivas</td><td>8247372600</td></tr>
+        <tr><td>3</td><td>Deshpande Sathish</td><td>9949706010</td></tr>
+        <tr><td>4</td><td>E.Hanmaiah</td><td></td></tr>
+        <tr><td>5</td><td>H.Jagadeeshwar</td><td>9908542535</td></tr>
+        <tr><td>6</td><td>M.Dharma</td><td>9705968353</td></tr>
+        <tr><td>7</td><td>Miskin</td><td>8008474727</td></tr>
+        <tr><td>8</td><td>Nagaraju</td><td>9908239086</td></tr>
+        <tr><td>9</td><td>O.Mastan Naidu</td><td>9030396313</td></tr>
+        <tr><td>10</td><td>P.Arun Kumar</td><td></td></tr>
+        <tr><td>11</td><td>P.Nagaraju</td><td>8555983040</td></tr>
+        <tr><td>12</td><td>P.Narsimha</td><td>9032324066</td></tr>
+        <tr><td>13</td><td>P.Srinivas</td><td>9440603642</td></tr>
+        <tr><td>14</td><td>P.Vanaja</td><td>9963414489</td></tr>
+        <tr><td>15</td><td>S.Aravind</td><td>8143810040</td></tr>
+        <tr><td>16</td><td>S.Balakrishna</td><td></td></tr>
+        <tr><td>17</td><td>S.Krishna Reddy</td><td>9100712122</td></tr>
+        <tr><td>18</td><td>S.Laxmi</td><td>8143810040</td></tr>
+        <tr><td>19</td><td>S.Raju</td><td>9440254421</td></tr>
+        <tr><td>20</td><td>S.Upender</td><td>9966005374</td></tr>
+        <tr><td>21</td><td>Surender Rao</td><td>8121182268</td></tr>
+        <tr><td>22</td><td>T.Biswas</td><td>9441679326</td></tr>
+        <tr><td>23</td><td>V.Laxmaiah</td><td>9490447457</td></tr>
+        <tr><td>24</td><td>V.Ramulu Naik</td><td></td></tr>
+        <tr><td>25</td><td>Vittal</td><td>7901560138</td></tr>
+        <tr><td>26</td><td>Yesudas</td><td>9014430331</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Road 5 Residents -->
+  <h4 class="mt-5">Road No: 5</h4>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover shadow-sm">
+      <thead class="table-secondary text-center">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr><td>1</td><td>Asiya</td><td></td></tr>
+        <tr><td>2</td><td>C.Mary</td><td>9440913982</td></tr>
+        <tr><td>3</td><td>C.Srilatha</td><td>9989118204</td></tr>
+        <tr><td>4</td><td>D.Govind</td><td>9441530032</td></tr>
+        <tr><td>5</td><td>D.Venkat</td><td>9440252517</td></tr>
+        <tr><td>6</td><td>Eknath Patil</td><td>9030474815</td></tr>
+        <tr><td>7</td><td>K.Sridhar Reddy</td><td>9440229626</td></tr>
+        <tr><td>8</td><td>Late M.Muralidhar / M.Laxmi</td><td>6305859538</td></tr>
+        <tr><td>9</td><td>M.Sridhar</td><td>9949962625</td></tr>
+        <tr><td>10</td><td>P.Gopal</td><td>9866683074</td></tr>
+        <tr><td>11</td><td>S.Pandari</td><td>9640021288</td></tr>
+        <tr><td>12</td><td>Surya Narayana</td><td>9490061924</td></tr>
+        <tr><td>13</td><td>V.Rajaneesh Reddy</td><td>9573546584</td></tr>
+        <tr><td>14</td><td>Yella Srinivasulu</td><td>9441204890, 8019898056</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
   </main>
 
   <!-- Footer -->
@@ -158,23 +307,19 @@
     <p class="mb-0">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <!-- Search Script -->
   <script>
-    const searchInput = document.getElementById("searchInput");
-    searchInput.addEventListener("keyup", function () {
-      const filter = this.value.toLowerCase();
-      const rows = document.querySelectorAll("#residentsTable tbody tr");
+  document.getElementById("searchInput").addEventListener("keyup", function() {
+    const filter = this.value.toLowerCase();
+    const allTables = document.querySelectorAll("table tbody tr");
 
-      rows.forEach(row => {
-        const name = row.cells[1].textContent.toLowerCase();
-        const house = row.cells[2].textContent.toLowerCase();
-
-        row.style.display = (name.includes(filter) || house.includes(filter)) ? "" : "none";
-      });
+    allTables.forEach(row => {
+      const rowText = row.textContent.toLowerCase();
+      row.style.display = rowText.includes(filter) ? "" : "none";
     });
+  });
   </script>
 
 </body>

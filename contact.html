@@ -11,24 +11,52 @@
     html, body {
       height: 100%;
       margin: 0;
+      font-family: 'Poppins', sans-serif;
       display: flex;
       flex-direction: column;
-      font-family: 'Poppins', sans-serif;
       background-color: #f4f6f8;
     }
-    main {
-      flex: 1;
-    }
-    .navbar, .offcanvas {
-      background-color: #3F51B5;
-    }
-    .nav-link, .navbar-brand {
-      color: white !important;
-    }
+    main { flex: 1; }
+    .navbar, .offcanvas { background-color: #3F51B5; }
+    .navbar-brand, .nav-link { color: #fff !important; }
     footer {
       background-color: #2E3A59;
-      color: white;
+      color: #fff;
       font-size: 0.9rem;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .map-container {
+      width: 100%;
+      height: 350px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .upi-section img {
+      max-width: 180px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .whatsapp-button {
+      display: inline-block;
+      margin-top: 5px;
+      background-color: #25D366;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -36,13 +64,12 @@
 
   <!-- Navbar -->
   <nav class="navbar navbar-dark px-3">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
+    <div class="container-fluid">
       <a class="navbar-brand">Sapthagiri Colony Welfare Society</a>
-
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu" aria-controls="mobileMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="d-none d-lg-flex">
         <ul class="navbar-nav flex-row gap-3">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -56,7 +83,7 @@
     </div>
   </nav>
 
-  <!-- Offcanvas Sidebar for Mobile -->
+  <!-- Offcanvas Mobile Menu -->
   <div class="offcanvas offcanvas-start text-bg-primary" tabindex="-1" id="mobileMenu">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title">Menu</h5>
@@ -75,38 +102,45 @@
   </div>
 
   <!-- Main Content -->
-  <main>
-    <section class="container my-5">
-      <h2 class="text-center text-primary mb-4">Contact Us</h2>
+  <main class="container my-5">
+    <h2 class="text-center mb-4">Contact Us</h2>
 
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="bg-light p-4 rounded shadow-sm">
-            <h5 class="text-primary">Society Address</h5>
-            <p class="mb-1">Sapthagiri Colony Welfare Society</p>
-            <p class="mb-1">SAPTHAGIRI COLONY, Sangareddy</p>
-            <p class="mb-3">Telangana - 502001</p>
-
-            <h5 class="text-primary mt-4">Committee Contact</h5>
-            <p class="mb-1"><strong>Secretary:</strong> Mrs. Anjali Sharma</p>
-            <p class="mb-1"><strong>Phone:</strong> +91 9876543211</p>
-            <p class="mb-3"><strong>Email:</strong> secretary@sapthagiri.org</p>
-
-            <h5 class="text-primary mt-4">UPI for Maintenance</h5>
-            <p class="mb-1"><strong>UPI ID:</strong> sapthagiri@upi</p>
-            <img src="assets/images/upi.png" alt="UPI QR Code" class="img-fluid rounded" style="max-width: 150px;">
-          </div>
-        </div>
+    <!-- Address & Map -->
+    <div class="mb-4">
+      <h5>Society Address</h5>
+      <p>SAPTHAGIRI COLONY WELFARE SOCIETY<br>
+      SAPTHAGIRI COLONY, WARD No. 9, SANGAREDDY – 502001<br>
+      (Regd. No. 1064/2017)</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps?q=Sapthagiri+Colony,+Sangareddy,+Telangana&output=embed"
+                allowfullscreen loading="lazy"></iframe>
       </div>
-    </section>
+    </div>
+
+    <!-- Committee Contacts -->
+    <div class="bg-light p-4 rounded shadow-sm mb-4">
+      <h5>Committee Contacts</h5>
+      <p><strong>General Secretary:</strong> Sri. K. Venu Gopal (Road No. 2) – 99497 06210
+        <br><a class="whatsapp-button" target="_blank" href="https://wa.me/919949706210">Chat on WhatsApp</a>
+      </p>
+      <p><strong>Joint Secretary:</strong> Sri. M. Ravishankar (Road No. 2) – 90529 72005
+        <br><a class="whatsapp-button" target="_blank" href="https://wa.me/919052972005">Chat on WhatsApp</a>
+      </p>
+    </div>
+
+    <!-- Maintenance UPI -->
+    <div class="bg-light p-4 rounded shadow-sm upi-section">
+      <h5>Maintenance Payments (UPI)</h5>
+      <p><strong>UPI ID:</strong> sapthagiri@upi</p>
+      <img src="assets/images/upi.png" alt="UPI QR Code for Maintenance">
+    </div>
   </main>
 
   <!-- Footer -->
-  <footer class="text-center py-3">
-    <p class="mb-0">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</p>
+  <footer>
+    <p>&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
