@@ -27,6 +27,10 @@
     footer { background-color: #2E3A59; color: white; font-size: 0.9rem; }
     .lang-en { display: block; }
     .lang-te { display: none; }
+    .carousel-item img { object-fit: cover; height: 250px; }
+    .carousel-caption { background: rgba(0,0,0,0.6); border-radius: 8px; padding: 5px; }
+    .carousel-caption h5 { font-weight: bold; margin-bottom: 2px; }
+    .carousel-caption small { display: block; color: #ddd; }
   </style>
 </head>
 <body>
@@ -90,20 +94,12 @@
       <div class="row">
         <div class="col-md-6">
           <div class="lang-en">
-            <p>
-              <strong>Sapthagiri Colony Welfare Society</strong> is a vibrant and well-organized residential community, committed to providing a safe, clean, and friendly environment for all its residents. Established with the aim of fostering unity and development, our society is a reflection of strong community values and active participation.
-            </p>
-            <p>
-              Located in a peaceful neighborhood, our colony is home to families from diverse backgrounds living in harmony. We host regular society meetings to ensure active engagement and inclusivity.
-            </p>
+            <p><strong>Sapthagiri Colony Welfare Society</strong> is a vibrant and well-organized residential community...</p>
+            <p>Located in a peaceful neighborhood, our colony is home to families from diverse backgrounds living in harmony...</p>
           </div>
           <div class="lang-te">
-            <p>
-              <strong>సప్తగిరి కాలనీ వెల్ఫేర్ సొసైటీ</strong> శాంతియుతమైన, శుభ్రమైన మరియు స్నేహపూర్వక వాతావరణాన్ని అందించడానికి కట్టుబడి ఉన్న ఉత్సాహభరితమైన మరియు బాగా నిర్వహించబడిన నివాస సముదాయం. ఐక్యత మరియు అభివృద్ధిని ప్రోత్సహించడానికి స్థాపించబడిన ఈ సంఘం బలమైన కమ్యూనిటీ విలువలు మరియు సక్రియ పాల్గొనటానికి నిదర్శనం.
-            </p>
-            <p>
-              శాంతియుత పరిసరాల్లో ఉన్న మా కాలనీ భిన్నమైన నేపథ్యాల నుండి వచ్చిన కుటుంబాలకు నివాసం. మేము రెగ్యులర్ సొసైటీ సమావేశాలను నిర్వహిస్తూ నివాసితుల మధ్య చురుకైన భాగస్వామ్యాన్ని మరియు సమగ్రతను ప్రోత్సహిస్తున్నాము.
-            </p>
+            <p><strong>సప్తగిరి కాలనీ వెల్ఫేర్ సొసైటీ</strong> శాంతియుతమైన, శుభ్రమైన మరియు స్నేహపూర్వక వాతావరణాన్ని అందించడానికి కట్టుబడి ఉన్న...</p>
+            <p>శాంతియుత పరిసరాల్లో ఉన్న మా కాలనీ భిన్నమైన నేపథ్యాల నుండి వచ్చిన కుటుంబాలకు నివాసం...</p>
           </div>
         </div>
         <div class="col-md-6">
@@ -130,7 +126,105 @@
       </div>
     </section>
 
-    <!-- Our Location Title -->
+    <!-- Photo Carousel -->
+    <section class="container my-5">
+  <h5 class="text-center mb-4">
+    <span class="lang-en">Committee Members 2025</span>
+    <span class="lang-te">కమిటీ సభ్యుల 2025</span>
+  </h5>
+
+  <div id="committeeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="row text-center">
+          <div class="col-6 col-md-3">
+            <img src="assets/images/lohith1.jpg" class="img-fluid rounded shadow-sm mb-2" alt="President">
+            <div><strong>Sri. G. Santosh Kumar</strong></div>
+            <div><small>President</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/santosh.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Vice President">
+            <div><strong>Sri. D. Venkat</strong></div>
+            <div><small>Vice President</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/venkat.jpg" class="img-fluid rounded shadow-sm mb-2" alt="General Secretary">
+            <div><strong>Sri. K. Venu Gopal</strong></div>
+            <div><small>General Secretary</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/venu.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Joint Secretary">
+            <div><strong>Sri. M. Ravishankar</strong></div>
+            <div><small>Joint Secretary</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row text-center">
+          <div class="col-6 col-md-3">
+            <img src="assets/images/vittal.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Treasurer">
+            <div><strong>Sri. Vittal</strong></div>
+            <div><small>Treasurer</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/narsimha.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Adviser">
+            <div><strong>Sri. Putti Narsimha</strong></div>
+            <div><small>Adviser</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/arjun.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Organizing Secretary">
+            <div><strong>Sri. R. Arjun Rao</strong></div>
+            <div><small>Organizing Secretary</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/yashwanth.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Organizing Secretary">
+            <div><strong>Sri. E. Yashwanth</strong></div>
+            <div><small>Organizing Secretary</small></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="row text-center">
+          <div class="col-6 col-md-3">
+            <img src="assets/images/mastan.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Organizing Secretary">
+            <div><strong>Sri. O. Mastan Naidu</strong></div>
+            <div><small>Organizing Secretary</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/sridhar.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Organizing Secretary">
+            <div><strong>Sri. K. Sridhar</strong></div>
+            <div><small>Organizing Secretary</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <img src="assets/images/govind.jpg" class="img-fluid rounded shadow-sm mb-2" alt="Organizing Secretary">
+            <div><strong>Sri. D. Govind</strong></div>
+            <div><small>Organizing Secretary</small></div>
+          </div>
+          <div class="col-6 col-md-3">
+            <!-- Optional placeholder -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#committeeCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#committeeCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+    <!-- Location -->
     <section class="text-center py-4 bg-light">
       <h5 class="text-primary">
         <span class="lang-en">Our Location</span>
@@ -138,26 +232,23 @@
       </h5>
     </section>
 
-    <!-- Google Map -->
     <section class="w-100 p-0 m-0">
       <iframe 
         src="https://www.google.com/maps?q=Sapthagiri+Colony,+Sangareddy,+Telangana+502001&output=embed" 
         title="Google Maps - Sapthagiri Colony"
-        width="100%" 
-        height="350" 
-        style="border:0; display:block;"
-        allowfullscreen>
+        width="100%" height="350" style="border:0; display:block;" allowfullscreen>
       </iframe>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="text-center py-3">
-    <p class="mb-0">
-      <span class="lang-en">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved.</span>
-      <span class="lang-te">&copy; 2025 సప్తగిరి కాలనీ సంక్షేమ సంఘం. అన్ని హక్కులు రిజర్వు.</span>
-    </p>
-  </footer>
+  <p class="mb-0">
+    <span class="lang-en">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved. | <a href="developer.html" class="text-light text-decoration-underline">Developer</a></span>
+    <span class="lang-te">&copy; 2025 సప్తగిరి కాలనీ సంక్షేమ సంఘం. అన్ని హక్కులు రిజర్వు. | <a href="developer.html" class="text-light text-decoration-underline">డెవలపర్</a></span>
+  </p>
+</footer>
+
 
   <!-- Bootstrap JS + Language Switcher -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
