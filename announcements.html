@@ -80,7 +80,31 @@
       </div>
     </div>
   </div>
+  <style>
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #ffeb3b;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 0;
+}
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+</style>
 
+<div class="marquee">
+  <div class="marquee-text">
+    Latest Announcements: UGD Work Initiation in Road No. 4 - Thanks to Sri Karkam Srisailam Yadav Garu | Colony Development Program - Thank You Note
+  </div>
+</div>
   <!-- Main Content -->
   <main>
     <section class="container my-5">
