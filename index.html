@@ -186,12 +186,13 @@
     </div>
 
     
-    
+
     
   </div>
 </section>
   </main>
-
+  
+  
   <!-- Footer -->
   <footer class="text-center py-3">
   <p class="mb-0">
@@ -209,5 +210,16 @@
       document.querySelectorAll('.lang-te').forEach(el => el.style.display = (lang === 'te') ? 'block' : 'none');
     }
   </script>
+  <!-- Sangareddy Weather Widget -->
+<a class="weatherwidget-io" href="https://forecast7.com/en/17d63n78d08/sangareddy/" data-label_1="SANGAREDDY" data-label_2="WEATHER" data-theme="original" >SANGAREDDY WEATHER</a>
+<script>
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
+</script>
 </body>
 </html>
