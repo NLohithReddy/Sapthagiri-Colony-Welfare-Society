@@ -249,5 +249,35 @@
   }
 }(document,'script','weatherwidget-io-js');
 </script>
+
+<!-- Disclaimer Modal -->
+<div class="modal fade" id="disclaimerModal" tabindex="-1" aria-labelledby="disclaimerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning text-dark">
+        <h5 class="modal-title" id="disclaimerLabel">Disclaimer</h5>
+      </div>
+      <div class="modal-body">
+        <p>This website is intended for informational purposes related to Sapthagiri Colony Welfare Society. By continuing, you acknowledge and agree to the terms and nature of the content provided.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.onload = function () {
+    const isFromSameSite = document.referrer.includes(location.hostname);
+    const isReload = performance.navigation.type === 1 || performance.getEntriesByType("navigation")[0].type === "reload";
+
+    if (!isFromSameSite || isReload) {
+      const disclaimerModal = new bootstrap.Modal(document.getElementById('disclaimerModal'));
+      disclaimerModal.show();
+    }
+  };
+</script>
+
 </body>
 </html>
