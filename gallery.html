@@ -60,6 +60,9 @@
       transform: scale(1.03);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     }
+    .lang-en { display: block; }
+    .lang-te { display: none; }
+
 
     footer {
       background-color: #2E3A59;
@@ -71,59 +74,69 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-dark px-3">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <a class="navbar-brand">Sapthagiri Colony Welfare Society</a>
-      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="d-none d-lg-flex">
-        <ul class="navbar-nav flex-row gap-3">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
-          <li class="nav-item"><a class="nav-link" href="residents.html">Residents</a></li>
-          <li class="nav-item"><a class="nav-link" href="fundtracker.html">Fund Tracker</a></li>
-          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Offcanvas Sidebar for Mobile -->
-  <div class="offcanvas offcanvas-start text-bg-primary" tabindex="-1" id="mobileMenu">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title">Menu</h5>
-      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="navbar-nav">
+<nav class="navbar navbar-dark px-3">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <a class="navbar-brand">Sapthagiri Colony Welfare Society</a>
+    <div class="d-none d-lg-flex">
+      <ul class="navbar-nav flex-row gap-3 align-items-center mb-0">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
         <li class="nav-item"><a class="nav-link" href="residents.html">Residents</a></li>
         <li class="nav-item"><a class="nav-link" href="fundtracker.html">Fund Tracker</a></li>
         <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item">
+          <button class="btn btn-sm btn-light me-1" onclick="setLanguage('en')">English</button>
+          <button class="btn btn-sm btn-warning" onclick="setLanguage('te')">తెలుగు</button>
+        </li>
       </ul>
     </div>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
+</nav>
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-start text-bg-primary" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="announcements.html">Announcements</a></li>
+      <li class="nav-item"><a class="nav-link" href="residents.html">Residents</a></li>
+      <li class="nav-item"><a class="nav-link" href="fundtracker.html">Fund Tracker</a></li>
+      <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+      <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
   <!-- Main Content -->
   <main>
     <section class="container my-5">
-      <h2 class="text-center mb-4">Gallery</h2>
+        <h2 class="text-center mb-4">
+        <span class="lang-en">Gallery</span>
+        <span class="lang-te">గ్యాలరీ</span>
+        </h2>
 
       <div class="accordion" id="galleryAccordion">
         <!-- Elders of Sapthagiri Colony -->
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingElders">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseElders" aria-expanded="false" aria-controls="collapseElders">
-      <strong>Elders of Sapthagiri Colony</strong>
-    </button>
+  <strong>
+    <span class="lang-en">Elders of Sapthagiri Colony</span>
+    <span class="lang-te">సప్తగిరి కాలనీ పెద్దలు</span>
+  </strong>
+</button>
   </h2>
   <div id="collapseElders" class="accordion-collapse collapse" aria-labelledby="headingElders" data-bs-parent="#galleryAccordion">
     <div class="accordion-body">
@@ -134,7 +147,11 @@
           <a href="assets/images/elders/ramachandran.jpg" data-lightbox="elders" data-title="Ramachandran">
             <img src="assets/images/elders/ramachandran.jpg" class="gallery-img shadow-sm" alt="Ramachandran">
           </a>
-          <p class="mt-2 fw-bold">Ramachandran</p>
+          <p class="mt-2 fw-bold">
+          <span class="lang-en">Ramachandran</span>
+          <span class="lang-te">రామచంద్రన్</span>
+          </p>
+
         </div>
 
         <!-- Elder 6 -->
@@ -142,7 +159,10 @@
           <a href="assets/images/elders/harisingh.jpg" data-lightbox="elders" data-title="Ramachandran">
             <img src="assets/images/elders/harisingh.jpg" class="gallery-img shadow-sm" alt="Ramachandran">
           </a>
-          <p class="mt-2 fw-bold">Harisingh Rathod</p>
+          <p class="mt-2 fw-bold">
+          <span class="lang-en">Harisingh Rathod</span>
+          <span class="lang-te">హరిసింగ్ రాథోడ్</span>
+          </p>
         </div>
 
         <!-- Elder 2 -->
@@ -150,7 +170,10 @@
           <a href="assets/images/elders/gopal.jpg" data-lightbox="elders" data-title="Gopal">
             <img src="assets/images/elders/gopal.jpg" class="gallery-img shadow-sm" alt="Gopal">
           </a>
-          <p class="mt-2 fw-bold">Gopal</p>
+          <p class="mt-2 fw-bold">
+          <span class="lang-en">Gopal</span>
+          <span class="lang-te">గోపాల్</span>
+          </p>
         </div>
 
         <!-- Elder 3 -->
@@ -158,7 +181,10 @@
           <a href="assets/images/elders/laxminarayana.jpg" data-lightbox="elders" data-title="Laxminarayana">
             <img src="assets/images/elders/laxminarayana.jpg" class="gallery-img shadow-sm" alt="Laxminarayana">
           </a>
-          <p class="mt-2 fw-bold">Laxminarayana</p>
+          <p class="mt-2 fw-bold">
+  <span class="lang-en">Laxminarayana</span>
+  <span class="lang-te">లక్ష్మీనారాయణ</span>
+</p>
         </div>
 
         <!-- Elder 4 -->
@@ -166,7 +192,10 @@
           <a href="assets/images/elders/mahendrareddy.jpg" data-lightbox="elders" data-title="Mahendra Reddy">
             <img src="assets/images/elders/mahendrareddy.jpg" class="gallery-img shadow-sm" alt="Mahendra Reddy">
           </a>
-          <p class="mt-2 fw-bold">Mahendra Reddy</p>
+          <p class="mt-2 fw-bold">
+  <span class="lang-en">Mahendra Reddy</span>
+  <span class="lang-te">మహేంద్ర రెడ్డి</span>
+</p>
         </div>
 
         <!-- Elder 5 -->
@@ -174,7 +203,10 @@
           <a href="assets/images/elders/ramesh.jpg" data-lightbox="elders" data-title="D Ramesh">
             <img src="assets/images/elders/ramesh.jpg" class="gallery-img shadow-sm" alt="D Ramesh">
           </a>
-          <p class="mt-2 fw-bold">D Ramesh</p>
+          <p class="mt-2 fw-bold">
+  <span class="lang-en">D Ramesh</span>
+  <span class="lang-te">డి. రమేష్</span>
+</p>
         </div>
 
       </div>
@@ -185,7 +217,10 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingGanesh1">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGanesh1">
-      <strong>Prathama Vinayaka Chavithi Mahotsavam</strong>
+      <strong>
+  <span class="lang-en">Prathama Vinayaka Chavithi Mahotsavam</span>
+  <span class="lang-te">ప్రథమ వినాయక చవితి మహోత్సవం</span>
+</strong>
     </button>
   </h2>
   <div id="collapseGanesh1" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -236,7 +271,10 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingGanesh">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGanesh">
-      <strong>Ganesh & Bathukamma Celebrations in Sapthagiri Colony (Before 2025)</strong>
+      <strong>
+  <span class="lang-en">Ganesh & Bathukamma Celebrations in Sapthagiri Colony (Before 2025)</span>
+  <span class="lang-te">సప్తగిరి కాలనీలో గణేశ్ & బతుకమ్మ వేడుకలు (2025కి ముందు)</span>
+</strong>
     </button>
   </h2>
   <div id="collapseGanesh" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -328,7 +366,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingNine">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
-      <strong>UGD & CC Road Laying at Road No 2 – Efforts by Sri Kodimela Venu Gopal with Coordination of Smt & Sri Lade Manila Mallesham (Councillor, 9th Ward)- 2021</strong>
+      <strong>
+  <span class="lang-en">UGD & CC Road Laying at Road No 2 – Efforts by Sri Kodimela Venu Gopal with Coordination of Smt & Sri Lade Manila Mallesham (Councillor, 9th Ward) – 2021</span>
+  <span class="lang-te">రోడ్ నెం. 2 వద్ద UGD & CC రోడ్డు నిర్మాణం – శ్రీ కొడిమేళ్ల వేణు గోపాల్ గారి ప్ర‌య‌త్నాలు మరియు 9వ వార్డు కౌన్సిలర్ శ్రీమతి & శ్రీ లాడే మనిల మల్లేశం గారి సమన్వయంతో – 2021</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -391,7 +433,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingJuly">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseJuly">
-      <strong>Filling of Road Damages at Ganesh Mandapam Road & ITI Road – July 2022 (Self-Funded by Sri Kodimela Venu Gopal, Resident of Road No 2)</strong>
+      <strong>
+  <span class="lang-en">Filling of Road Damages at Ganesh Mandapam Road & ITI Road – July 2022 (Self-Funded by Sri Kodimela Venu Gopal, Resident of Road No 2)</span>
+  <span class="lang-te">గణేష్ మండపం రోడ్ మరియు ఐటీఐ రోడ్ వద్ద రోడ్డు గండులు పూడ్చడం – జూలై 2022 (రోడ్ నెం. 2 నివాసితుడు శ్రీ కొడిమేళ్ల వేణు గోపాల్ గారు స్వయంగా ఖర్చుతో)</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseJuly" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -485,7 +531,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingTen">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen">
-      <strong>Laying of UGD Pipeline on the Connecting Road from Road No 1 to Road No 5 – January 2023 (Initiated by Smt. & Sri Lade Manila Mallesham, Councillor – 9th Ward)</strong>
+      <strong>
+  <span class="lang-en">Laying of UGD Pipeline on the Connecting Road from Road No 1 to Road No 5 – January 2023 (Initiated by Smt. & Sri Lade Manila Mallesham, Councillor – 9th Ward)</span>
+  <span class="lang-te">రోడ్ నెం. 1 నుండి రోడ్ నెం. 5 వరకు కనెక్టింగ్ రోడ్‌పై UGD పైప్‌లైన్ వేయడం – జనవరి 2023 (9వ వార్డు కౌన్సిలర్ శ్రీమతి & శ్రీ లాడే మనిల మల్లేశం గారు ప్రారంభించారు)</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -564,7 +614,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingEleven">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven">
-      <strong>Visit of Sangareddy MLA Sri T. Jayaprakash Reddy Garu to Sapthagiri Colony</strong>
+      <strong>
+  <span class="lang-en">Visit of Sangareddy MLA Sri T. Jayaprakash Reddy Garu to Sapthagiri Colony</span>
+  <span class="lang-te">సంగారెడ్డి ఎమ్మెల్యే శ్రీ టీ. జయప్రకాశ్ రెడ్డి గారు సప్తగిరి కాలనీలో పర్యటన</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -627,7 +681,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingTwelve">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve">
-      <strong>Representation for Colony Development to Sri Goverdhan Naik (Councillor) and Sri Chinta Prabhakar Garu (MLA, Sangareddy)</strong>
+      <strong>
+  <span class="lang-en">Representation for Colony Development to Sri Goverdhan Naik (Councillor) and Sri Chinta Prabhakar Garu (MLA, Sangareddy)</span>
+  <span class="lang-te">కాలనీ అభివృద్ధికి సంబంధించిన వినతిపత్రం శ్రీ గోవర్ధన్ నాయిక్ గారు (కౌన్సిలర్) మరియు శ్రీ చింతా ప్రభాకర్ గారు (ఎమ్మెల్యే, సంగారెడ్డి)కు అందజేత</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -667,7 +725,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingThree">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-      <strong>Committee Election 2025 – Notification, Schedule & Results (18th May 2025)</strong>
+      <strong>
+  <span class="lang-en">Committee Election 2025 – Notification, Schedule & Results (18th May 2025)</span>
+  <span class="lang-te">కమిటీ ఎన్నికలు 2025 – నోటిఫికేషన్, షెడ్యూల్ మరియు ఫలితాలు (2025 మే 18)</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -724,7 +786,11 @@
 <div class="accordion-item">
   <h2 class="accordion-header" id="headingFour">
     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-      <strong>CC Cameras Working Verification</strong>
+      <strong>
+  <span class="lang-en">CC Cameras Working Verification</span>
+  <span class="lang-te">సీసీ కెమెరాలు పని చేస్తున్నాయా అనే తనిఖీ</span>
+</strong>
+
     </button>
   </h2>
   <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -757,7 +823,11 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingFive">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-                <strong>Colony Road Restoration Activities – June 2025</strong>
+                <strong>
+  <span class="lang-en">Colony Road Restoration Activities – June 2025</span>
+  <span class="lang-te">కాలనీ రోడ్డు పునరుద్ధరణ చర్యలు – జూన్ 2025</span>
+</strong>
+
               </button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -884,7 +954,11 @@
                 </div>
 
                 <!-- Local Videos (3 videos) -->
-                <h5 class="mt-4">Event Videos: Colony Road Restoration Highlights</h5>
+                <h5 class="mt-4">
+  <span class="lang-en">Event Videos: Colony Road Restoration Highlights</span>
+  <span class="lang-te">ఈవెంట్ వీడియోలు: కాలనీ రోడ్డు పునరుద్ధరణ ముఖ్యాంశాలు</span>
+</h5>
+
 
                 <div class="mb-4" style="max-width: 600px; margin: auto;">
                   <video controls width="100%">
@@ -912,7 +986,11 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingSix">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
-              <strong>General Body Meeting – June 6th, 2025</strong>
+              <strong>
+  <span class="lang-en">General Body Meeting – June 6th, 2025</span>
+  <span class="lang-te">జనరల్ బాడీ మీటింగ్ – జూన్ 6, 2025</span>
+</strong>
+
             </button>
           </h2>
           <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -962,7 +1040,11 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              <strong>Meeting with Sri Karkam Srisailam Yadav Garu (26th June 2025)</strong>
+              <strong>
+  <span class="lang-en">Meeting with Sri Karkam Srisailam Yadav Garu (26th June 2025)</span>
+  <span class="lang-te">శ్రీ కర్కం శ్రీశైలం యాదవ్ గారితో సమావేశం (26 జూన్ 2025)</span>
+</strong>
+
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -982,7 +1064,11 @@
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-              <strong> Development Program & UGD Work Initiation (28th June 2025)</strong>
+              <strong>
+  <span class="lang-en">Development Program & UGD Work Initiation (28th June 2025)</span>
+  <span class="lang-te">అభివృద్ధి కార్యక్రమం & UGD పనుల ప్రారంభం (28 జూన్ 2025)</span>
+</strong>
+
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -1057,7 +1143,11 @@
               </div>
 
               <!-- Video -->
-              <h5 class="mt-4">Event Video: UGD and CC Road Initiation Program</h5>
+              <h5 class="mt-4">
+  <span class="lang-en">Event Video: UGD and CC Road Initiation Program</span>
+  <span class="lang-te">ఈవెంట్ వీడియో: UGD మరియు CC రోడ్డు ప్రారంభ కార్యక్రమం</span>
+</h5>
+
               <div class="ratio ratio-16x9 mb-4" style="max-width: 600px; margin: auto;">
                 <iframe src="https://www.youtube.com/embed/DxBilLltArA" title="UGD Initiation Video" allowfullscreen></iframe>
               </div>
@@ -1068,7 +1158,11 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingSeven">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
-                <strong>Construction of UGD at Road No 4</strong>
+                <strong>
+  <span class="lang-en">Construction of UGD at Road No 4</span>
+  <span class="lang-te">రోడ్ నెం. 4 వద్ద UGD నిర్మాణం</span>
+</strong>
+
               </button>
             </h2>
             <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#galleryAccordion">
@@ -1139,7 +1233,11 @@
                 </div>
 
                 <!-- Optional: Add Video -->
-                <h5 class="mt-4">Event Video: UGD Work at Road No 4</h5>
+                <h5 class="mt-4">
+  <span class="lang-en">Event Video: UGD Work at Road No 4</span>
+  <span class="lang-te">ఈవెంట్ వీడియో: రోడ్ నెం. 4 వద్ద UGD పనులు</span>
+</h5>
+
                 <div class="mb-4" style="max-width: 600px; margin: auto;">
                   <video controls width="100%">
                     <source src="assets\images\ugd4\1.mp4" type="video/mp4">
@@ -1159,6 +1257,8 @@
   <footer class="text-center py-3">
   <p class="mb-0">
     <span class="lang-en">&copy; 2025 Sapthagiri Colony Welfare Society. All rights reserved. | <a href="developer.html" class="text-light text-decoration-underline">Developer</a></span>
+<span class="lang-te">&copy; 2025 సప్తగిరి కాలనీ సంక్షేమ సంఘం. అన్ని హక్కులు కలదు. | <a href="developer.html" class="text-light text-decoration-underline">డెవలపర్</a></span>
+
     
   </p>
 </footer>
@@ -1168,6 +1268,16 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Lightbox JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-
+<script>
+  function setLanguage(lang) {
+    if (lang === 'en') {
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'block');
+      document.querySelectorAll('.lang-te').forEach(el => el.style.display = 'none');
+    } else if (lang === 'te') {
+      document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.lang-te').forEach(el => el.style.display = 'block');
+    }
+  }
+</script>
 </body>
 </html>
