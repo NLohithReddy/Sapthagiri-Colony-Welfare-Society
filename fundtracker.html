@@ -159,13 +159,29 @@ function loadCSVData(url, tableId, isContributions) {
     .then(response => response.text())
     .then(data => {
       const rows = data.trim().split('\n').map(r => r.split(','));
+
+      // Add "Total" column if contributions table
+      if (isContributions) {
+        if (!rows[0].includes('Total')) {
+          rows[0].push('Total');
+        }
+
+        for (let i = 1; i < rows.length; i++) {
+          const amountCols = rows[i].slice(2).map(val => parseInt(val.trim()) || 0);
+          const total = amountCols.reduce((a, b) => a + b, 0);
+          rows[i].push(total);
+        }
+      }
+
       const table = $('#' + tableId);
       table.empty();
 
+      // Build HTML for thead
       let thead = '<thead><tr>';
       rows[0].forEach(col => thead += `<th>${col}</th>`);
       thead += '</tr></thead>';
 
+      // Build HTML for tbody
       let tbody = '<tbody>';
       for (let i = 1; i < rows.length; i++) {
         tbody += '<tr>';
@@ -174,57 +190,56 @@ function loadCSVData(url, tableId, isContributions) {
       }
       tbody += '</tbody>';
 
+      // Append to table
       table.append(thead + tbody);
 
+      // Initialize DataTable
       table.DataTable({
         dom: 'Bfrtip',
         buttons: ['excelHtml5', 'csvHtml5'],
         scrollX: true,
-        destroy: true
+        destroy: true,
+        initComplete: () => {
+          if (isContributions) calculateFundSummary();
+        }
       });
-
-      if (isContributions) calculateTotalPaidPerPerson();
-      calculateFundSummary();
-    });
-}
-
-function calculateTotalPaidPerPerson() {
-  $('#contributionsTable tbody tr').each(function() {
-    let total = 0;
-    $(this).find('td').slice(2).each(function() {
-      total += parseInt($(this).text().trim()) || 0;
-    });
-    if ($(this).find('td').length > 0) {
-      $(this).find('td:last').text(total);
-    }
-  });
+    })
+    .catch(error => console.error("CSV Load Error:", error));
 }
 
 function calculateFundSummary() {
   let totalCollected = 0;
-  $('#contributionsTable tbody tr').each(function() {
-    let lastCell = parseInt($(this).find('td').last().text().trim()) || 0;
+
+  // Get DataTable API instance
+  const table = $('#contributionsTable').DataTable();
+
+  // Loop through all rows (not just DOM ones)
+  table.rows().every(function () {
+    const data = this.data();
+    const lastCell = parseInt(data[data.length - 1].replace(/[^0-9]/g, '')) || 0;
     totalCollected += lastCell;
   });
 
   let totalSpent = 0;
-  $('#expenditureTable tbody tr').each(function() {
+  $('#expenditureTable tbody tr').each(function () {
     let spent = $(this).find('td:nth-child(3)').text().replace(/[^0-9]/g, '');
     totalSpent += parseInt(spent) || 0;
   });
 
-  let balance = totalCollected - totalSpent;
+  const balance = totalCollected - totalSpent;
+
   $('#totalCollected').text('₹' + totalCollected.toLocaleString());
   $('#totalSpent').text('₹' + totalSpent.toLocaleString());
   $('#currentBalance').text('₹' + balance.toLocaleString());
 }
+
 
 function setLanguage(lang) {
   document.querySelectorAll('.lang-en').forEach(el => el.style.display = (lang === 'en') ? 'block' : 'none');
   document.querySelectorAll('.lang-te').forEach(el => el.style.display = (lang === 'te') ? 'block' : 'none');
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
   loadCSVData('https://docs.google.com/spreadsheets/d/e/2PACX-1vS4XUvpAO7tsvY0X3N4qqAneIskdQ43W4tVdIhrlmKl9-e8kgah6bfGh6pIfCWcJPNz9KxgeeVL4tXo/pub?gid=0&single=true&output=csv', 'contributionsTable', true);
   loadCSVData('https://docs.google.com/spreadsheets/d/e/2PACX-1vS4XUvpAO7tsvY0X3N4qqAneIskdQ43W4tVdIhrlmKl9-e8kgah6bfGh6pIfCWcJPNz9KxgeeVL4tXo/pub?gid=962933700&single=true&output=csv', 'expenditureTable', false);
 });
