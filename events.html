@@ -47,6 +47,10 @@
       font-size: 1.1rem;
       font-weight: 600;
     }
+    a.card-link {
+      text-decoration: none;
+      color: inherit;
+    }
   </style>
 </head>
 <body>
@@ -97,7 +101,6 @@
       <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
     </ul>
     <hr>
-    <!-- Language Toggle Buttons (Standardized) -->
     <div>
       <button class="btn btn-sm btn-light w-100 mb-2" onclick="setLanguage('en')">English</button>
       <button class="btn btn-sm btn-warning w-100" onclick="setLanguage('te')">తెలుగు</button>
@@ -115,40 +118,29 @@
 
     <div class="row g-4">
 
-      <div class="col-md-6 col-lg-4 d-flex">
-  <div class="card shadow-sm event-card w-100">
-    <img src="assets/images/events/bonalu.jpg" class="card-img-top" alt="Bonalu Festival">
-    <div class="card-body">
-      <h5 class="card-title">
-        <span class="lang-en">Bonalu (July 2025)</span>
-        <span class="lang-te">బోనాలు (జూలై 2025)</span>
-      </h5>
-      <p class="card-text">
-        <span class="lang-en">Bonalu will be celebrated with devotion and vibrant cultural performances. The colony is planning to arrange pooja, prasadam, and traditional folk dances in the evening.</span>
-        <span class="lang-te">భక్తి శ్రద్ధలతో బోనాల వేడుకలు జరుపబడతాయి. కాలనీలో పూజ, ప్రసాదం, మరియు సాయంత్రం జానపద నృత్యాలు ఏర్పాటు చేయబడతాయి.</span>
-      </p>
-    </div>
-  </div>
-</div>
+      
 
+      <!-- Ganesh Festival (Clickable) -->
       <div class="col-md-6 col-lg-4 d-flex">
-  <div class="card shadow-sm event-card w-100">
-    <img src="assets/images/events/ganesh.jpg" class="card-img-top" alt="Vinayaka Chavithi">
-    <div class="card-body">
-      <h5 class="card-title">
-        <span class="lang-en">Vinayaka Chavithi (August 2025)</span>
-        <span class="lang-te">వినాయక చవితి (ఆగస్టు 2025)</span>
-      </h5>
-      <p class="card-text">
-        <span class="lang-en">Upcoming celebration with Ganesh installation, pooja, and visarjan. Community participation expected for decoration and arrangements.</span>
-        <span class="lang-te">గణేష్ విగ్రహ ప్రతిష్ఠ, పూజ మరియు విసర్జనతో వినాయక చవితి వేడుకలు జరగనున్నాయి. అలంకరణ మరియు ఏర్పాట్లలో కాలనీ వాసుల సహకారం ఆశించబడుతుంది.</span>
-      </p>
-    </div>
-  </div>
-</div>
+        <a href="ganesh2025.html" class="card-link w-100">
+          <div class="card shadow-sm event-card w-100">
+            <img src="assets/images/events/ganesh.jpg" class="card-img-top" alt="Vinayaka Chavithi">
+            <div class="card-body">
+              <h5 class="card-title">
+                <span class="lang-en">Vinayaka Chavithi (August 2025)</span>
+                <span class="lang-te">వినాయక చవితి (ఆగస్టు 2025)</span>
+              </h5>
+              <p class="card-text">
+                <span class="lang-en">Click to see full details about this year’s Ganesh festival, pooja, children’s games, and visarjan.</span>
+                <span class="lang-te">ఈ సంవత్సరం గణేష్ వేడుకల పూర్తి వివరాలు, పూజ, పిల్లల ఆటలు మరియు విసర్జన చూడటానికి క్లిక్ చేయండి.</span>
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
 
       <!-- Add more event cards here -->
-      
+
     </div>
   </section>
 </main>
